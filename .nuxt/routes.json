@@ -1,0 +1,16 @@
+[
+  {
+    "name": "inspire",
+    "path": "/inspire",
+    "component": "/Users/pc604/k-taiga/ogp_frontend/pages/inspire.vue",
+    "chunkName": "pages/inspire",
+    "_name": "_1d5a8774"
+  },
+  {
+    "name": "index",
+    "path": "/",
+    "component": "/Users/pc604/k-taiga/ogp_frontend/pages/index.vue",
+    "chunkName": "pages/index",
+    "_name": "_21c54c28"
+  }
+]
