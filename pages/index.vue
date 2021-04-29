@@ -1,53 +1,67 @@
 <template>
-  <section class="section">
-    <div class="columns is-mobile">
-      <card
-        title="Free"
-        icon="github"
-      >
-        Open source on <a href="https://github.com/buefy/buefy">
-          GitHub
-        </a>
-      </card>
-
-      <card
-        title="Responsive"
-        icon="cellphone-link"
-      >
-        <b class="has-text-grey">
-          Every
-        </b> component is responsive
-      </card>
-
-      <card
-        title="Modern"
-        icon="alert-decagram"
-      >
-        Built with <a href="https://vuejs.org/">
-          Vue.js
-        </a> and <a href="http://bulma.io/">
-          Bulma
-        </a>
-      </card>
-
-      <card
-        title="Lightweight"
-        icon="arrange-bring-to-front"
-      >
-        No other internal dependency
-      </card>
+  <section class="section no-top-pad">
+    <div id="js_capture_ref" class="OGPMessage">
+      <span class="your-message">あなたのメッセージ</span>
+      <span v-if="message">
+        {{ message }}
+      </span>
+      <span v-else class="no-input">
+        入力エリアにメッセージを入れてください
+      </span>
+    </div>
+    <div class="columns is-centered is-mobile">
+      <div class="column is-half-desktop is-full-mobile is-full-tablet">
+        <form>
+          <div class="field">
+            <label class="label">あなたのメッセージ</label>
+            <div class="control">
+              <input
+                class="input"
+                name="message"
+                v-model="message"
+                placeholder="メッセージを入力してください"
+              />
+            </div>
+          </div>
+          <div class="field">
+            <div class="control"></div>
+          </div>
+        </form>
+      </div>
     </div>
   </section>
 </template>
 
 <script>
-import Card from '~/components/Card'
-
 export default {
-  name: 'HomePage',
+  data() {
+    return {
+      message: ""
+    };
+  },
+  methods: {
+    handleGenerateOGP(e) {
 
-  components: {
-    Card
+    }
   }
-}
+};
 </script>
+
+<style scoped>
+.your-message {
+font-size: 14px;
+display: block;
+}
+.no-input {
+color: #ccc;
+}
+.OGPMessage {
+padding: 20px 0;
+font-size: 20px;
+font-weight: bold;
+text-align: center;
+border-radius: 10px;
+border: 10px solid #55c500;
+margin-bottom: 30px;
+}
+</style>
