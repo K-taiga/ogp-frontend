@@ -24,7 +24,11 @@
             </div>
           </div>
           <div class="field">
-            <div class="control"></div>
+            <div class="control">
+              <client-only placeholder="Loading...">
+                <GenerateOGPButton @click="handleGenerateOGP" />
+              </client-only>
+            </div>
           </div>
         </form>
       </div>
@@ -33,35 +37,42 @@
 </template>
 
 <script>
+import GenerateOGPButton from "@/components/GenerateOGPButton";
 export default {
+  components: {
+    GenerateOGPButton,
+  },
   data() {
     return {
-      message: ""
+      message: "",
     };
   },
   methods: {
     handleGenerateOGP(e) {
-
-    }
-  }
+      this.$store.dispatch("setMessage", {
+        message: this.message,
+        image: e,
+      });
+    },
+  },
 };
 </script>
 
 <style scoped>
 .your-message {
-font-size: 14px;
-display: block;
+  font-size: 14px;
+  display: block;
 }
 .no-input {
-color: #ccc;
+  color: #ccc;
 }
 .OGPMessage {
-padding: 20px 0;
-font-size: 20px;
-font-weight: bold;
-text-align: center;
-border-radius: 10px;
-border: 10px solid #55c500;
-margin-bottom: 30px;
+  padding: 20px 0;
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+  border-radius: 10px;
+  border: 10px solid #55c500;
+  margin-bottom: 30px;
 }
 </style>
