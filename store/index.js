@@ -24,7 +24,7 @@ export const actions = {
             this.$router.push(`/message/${id}`);
         }
     },
-    setloadng({ commit }, payload) {
+    setLoading({ commit }, payload) {
         commit("setLoading", payload);
     }
 };

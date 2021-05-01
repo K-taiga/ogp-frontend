@@ -7,6 +7,13 @@
     "_name": "_1d5a8774"
   },
   {
+    "name": "message-id",
+    "path": "/message/:id",
+    "component": "/Users/pc604/k-taiga/ogp_frontend/pages/message/_id/index.vue",
+    "chunkName": "pages/message/_id/index",
+    "_name": "_17bce8cf"
+  },
+  {
     "name": "index",
     "path": "/",
     "component": "/Users/pc604/k-taiga/ogp_frontend/pages/index.vue",

@@ -5,6 +5,7 @@ import { interopDefault } from './utils'
 import scrollBehavior from './router.scrollBehavior.js'
 
 const _1d5a8774 = () => interopDefault(import('../pages/inspire.vue' /* webpackChunkName: "pages/inspire" */))
+const _17bce8cf = () => interopDefault(import('../pages/message/_id/index.vue' /* webpackChunkName: "pages/message/_id/index" */))
 const _21c54c28 = () => interopDefault(import('../pages/index.vue' /* webpackChunkName: "pages/index" */))
 
 const emptyFn = () => {}
@@ -22,6 +23,10 @@ export const routerOptions = {
     path: "/inspire",
     component: _1d5a8774,
     name: "inspire"
+  }, {
+    path: "/message/:id",
+    component: _17bce8cf,
+    name: "message-id"
   }, {
     path: "/",
     component: _21c54c28,
