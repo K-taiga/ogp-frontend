@@ -25,7 +25,7 @@ export default {
           h2c(document.querySelector("#js_capture_ref"), {
             backgroundColor: "#fff",
           }).then((canvas) => {
-            //   canvasをblob(生データ)化する
+            // canvasをblob(生データ)化する
             canvas.toBlob((blob) => {
               const reader = new FileReader();
               reader.readAsDataURL(blob);
@@ -39,5 +39,17 @@ export default {
       }
     });
   },
+
+  methods: {
+    handleClick(dataURI) {
+      // $emitで子から親に値を渡す
+      this.$emit("click", dataURI);
+    },
+  },
 };
 </script>
+<style scoped>
+.wrap {
+  text-align: center;
+}
+</style>
