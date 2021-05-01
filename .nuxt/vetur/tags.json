@@ -2,6 +2,9 @@
   "Card": {
     "description": "Auto imported from components/Card.vue"
   },
+  "GenerateOGPButton": {
+    "description": "Auto imported from components/GenerateOGPButton.vue"
+  },
   "Logo": {
     "description": "Auto imported from components/Logo.vue"
   }
