@@ -13,6 +13,9 @@ export const mutations = {
     },
     setLoading(state, payload) {
         state.isLoading = payload;
+    },
+    setOGP(state, payload) {
+        state.ogpData = payload;
     }
 };
 
@@ -26,6 +29,10 @@ export const actions = {
     },
     setLoading({ commit }, payload) {
         commit("setLoading", payload);
+    },
+    async getOGP({ commit }, payload) {
+        const data = await this.$axios.$get(`/api/messages/${payload}`);
+        commit("setOGP", data);
     }
 };
 
@@ -36,5 +43,8 @@ export const getters = {
     },
     loading(state) {
         return state.loading;
+    },
+    ogpData(state) {
+        return state.ogpData;
     }
 }
